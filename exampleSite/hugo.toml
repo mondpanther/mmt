@@ -1,5 +1,5 @@
 baseurl = "/"
-title = "Shawn Mind Move"
+title = "Shawn Carol Mind Move"
 theme = "mmt"
 languageCode = "en-us"
 defaultContentLanguage = "en"
@@ -59,7 +59,7 @@ pluralizelisttitles = false
     author = "Shawn"
     defaultKeywords = ["mystical", "mindset", "transformation", "influencer"]
     mainSections = ["blog"]
-    defaultDescription = "Shawn Mind Move — Mystical Influencer. Guiding you toward inner transformation and expanded consciousness."
+    defaultDescription = "Shawn Carol Mind Move — Mystical Influencer. Guiding you toward inner transformation and expanded consciousness."
 
     facebook_site = ""
     twitter_site = ""
@@ -82,20 +82,20 @@ pluralizelisttitles = false
     enableRecaptchaInContactForm = false
     googleRecaptchaKey = ""
 
-    about_us = "<p>Shawn Mind Move — Mystical Influencer. Guiding seekers toward inner transformation, expanded consciousness, and purposeful living.</p>"
-    copyright = "Copyright (c) 2025, Shawn Mind Move. All rights reserved."
+    about_us = "<p>Shawn Carol Mind Move — Mystical Influencer. Guiding seekers toward inner transformation, expanded consciousness, and purposeful living.</p>"
+    copyright = "Copyright (c) 2025, Shawn Carol Mind Move. All rights reserved."
 
     date_format = "January 2, 2006"
 
     dropdown_mouse_over = false
 
     disabled_logo = false
-    logo_text = "Shawn Mind Move"
+    logo_text = "Shawn Carol Mind Move"
 
     logo = "img/logo.png"
     logo_small = "img/logo-small.png"
     contact_url = "/contact"
-    address = """<p class="text-uppercase"><strong>Shawn Mind Move</strong>
+    address = """<p class="text-uppercase"><strong>Shawn Carol Mind Move</strong>
         <br>Mystical Influencer
       </p>
       """
