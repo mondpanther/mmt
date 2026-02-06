@@ -1,5 +1,5 @@
 [build]
-  command = "cd exampleSite && hugo --themesDir ../.. -b $URL"
+  command = "cd exampleSite && mkdir -p themes && ln -sf ../.. themes/mmt && hugo -b $URL"
   publish = "exampleSite/public"
 
 [build.environment]
