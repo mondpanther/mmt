@@ -1,5 +1,5 @@
 ---
-header_image: "images/IMG_20220528_212659.jpg"
+header_image: "images/cover-image.jpg"
 header_use_video: false
 header_logo: "images/logo.png"
 header_headline: "Shawn Carol Mind Move"
