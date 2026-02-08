@@ -1,15 +1,5 @@
 /* Shawn Mind Move — Minimalist Mystical Styling */
 
-body {
-    font-family: 'Georgia', 'Times New Roman', serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 300;
-    letter-spacing: 1px;
-}
-
 /* Soften the carousel text */
 #headerwrap .carousel .item .container h1,
 #headerwrap .carousel .item .container h2 {
@@ -35,3 +25,4 @@ section#call-to-action {
 #footer {
     letter-spacing: 0.5px;
 }
+
