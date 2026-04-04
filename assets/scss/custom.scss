@@ -1,0 +1,26 @@
+// Oak & Stone custom overrides for Wowchemy
+
+// Section dividers
+.home-section {
+  border-bottom: 1px solid rgba(89, 79, 72, 0.1);
+}
+
+// Gold accent for buttons
+.btn-primary {
+  background-color: #a3855c;
+  border-color: #a3855c;
+
+  &:hover {
+    background-color: #594f48;
+    border-color: #594f48;
+  }
+}
+
+// Link color
+a {
+  color: #a3855c;
+
+  &:hover {
+    color: #594f48;
+  }
+}

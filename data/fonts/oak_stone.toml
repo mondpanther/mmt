@@ -1,0 +1,11 @@
+# Font style metadata
+name = "Oak Stone"
+
+# Google font URL
+google_fonts = "family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Nunito+Sans:wght@300;400;600;700&display=swap"
+
+# Font families
+heading_font = "Cormorant Garamond"
+body_font = "Nunito Sans"
+nav_font = "Nunito Sans"
+mono_font = "Roboto Mono"

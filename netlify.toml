@@ -1,6 +1,16 @@
 [build]
-  command = "cd exampleSite && mkdir -p themes && ln -sf ../../themes/hugo-scroll themes/hugo-scroll && hugo -b $URL"
-  publish = "exampleSite/public"
+  command = "hugo --gc --minify -b $URL"
+  publish = "public"
 
 [build.environment]
-  HUGO_VERSION = "0.145.0"
+  HUGO_VERSION = "0.155.2"
+  HUGO_ENABLEGITINFO = "false"
+
+[context.production.environment]
+  HUGO_ENV = "production"
+
+[context.deploy-preview]
+  command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+
+[context.branch-deploy]
+  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"

@@ -1,0 +1,13 @@
+main:
+  - name: Mindset
+    url: '#mindset'
+    weight: 20
+  - name: Mysticism
+    url: '#mysticism'
+    weight: 30
+  - name: Transformation
+    url: '#transformation'
+    weight: 40
+  - name: Contact
+    url: '#contact'
+    weight: 50

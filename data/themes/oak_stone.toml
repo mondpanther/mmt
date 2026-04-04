@@ -1,0 +1,22 @@
+# Theme metadata
+name = "Oak Stone"
+
+# Is theme light or dark?
+light = true
+
+# Primary
+primary = "#a3855c"
+
+# Menu
+menu_primary = "#f8f1e8"
+menu_text = "#594f48"
+menu_text_active = "#a3855c"
+menu_title = "#594f48"
+
+# Home sections
+home_section_odd = "#f8f1e8"
+home_section_even = "#f2ebe0"
+
+[dark]
+  link = "#c4a97d"
+  link_hover = "#c4a97d"
