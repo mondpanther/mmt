@@ -20,8 +20,10 @@ advanced:
 
 <div style="text-align: center;">
 
-# Shawn Carol Mind Move
+# Mind Move Thrive
 
-**Fuzzy** Bear &mdash; Guiding you toward **inner transformation**
+### An integrated wellbeing practice, podcast, and newsletter.
+
+Mind Move Thrive brings together therapeutic and psychologically informed services, the Mind Move Thrive Podcast, and Well, From Here &mdash; a newsletter exploring movement, identity, wellbeing, place, and change.
 
 </div>

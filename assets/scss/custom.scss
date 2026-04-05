@@ -1,5 +1,21 @@
 // Oak & Stone custom overrides for Wowchemy
 
+// Larger navbar logo
+.navbar-brand img {
+  max-height: 120px !important;
+}
+@media (max-width: 767.98px) {
+  .navbar-brand img {
+    max-height: 80px !important;
+  }
+}
+
+// Navbar menu font to match hero title
+#navbar-main .nav-link,
+#navbar-main .navbar-brand span {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
 // Section dividers
 .home-section {
   border-bottom: 1px solid rgba(89, 79, 72, 0.1);
