@@ -32,6 +32,49 @@
   }
 }
 
+// Collapsible sections
+details {
+  margin-bottom: 1rem;
+  border: 1px solid rgba(89, 79, 72, 0.15);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  transition: background-color 0.2s;
+
+  &[open] {
+    background-color: rgba(89, 79, 72, 0.03);
+  }
+
+  summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 0.25rem 0;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::before {
+      content: "\f054";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 0.8em;
+      margin-right: 0.5rem;
+      color: #a3855c;
+      transition: transform 0.2s;
+      display: inline-block;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 1.3rem;
+    }
+  }
+
+  &[open] > summary::before {
+    transform: rotate(90deg);
+  }
+}
+
 // Link color
 a {
   color: #a3855c;
