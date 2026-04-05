@@ -2,8 +2,8 @@
 widget: blank
 headless: true
 active: true
-weight: 20
-title: "About"
+weight: 30
+title: "Services"
 design:
   columns: '1'
 ---

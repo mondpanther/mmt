@@ -1,13 +1,19 @@
 main:
-  - name: Mindset
-    url: '#mindset'
+  - name: Home
+    url: '#'
+    weight: 10
+  - name: About
+    url: '#about'
     weight: 20
-  - name: Mysticism
-    url: '#mysticism'
+  - name: Services
+    url: '#services'
     weight: 30
-  - name: Transformation
-    url: '#transformation'
+  - name: Podcast
+    url: '#podcast'
     weight: 40
+  - name: Well, From Here
+    url: '#well-from-here'
+    weight: 50
   - name: Contact
     url: '#contact'
-    weight: 50
+    weight: 60

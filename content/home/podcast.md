@@ -2,8 +2,8 @@
 widget: blank
 headless: true
 active: true
-weight: 20
-title: "About"
+weight: 40
+title: "Podcast"
 design:
   columns: '1'
 ---
