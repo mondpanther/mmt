@@ -1,25 +1,6 @@
-# Hugo
-public/
-resources/
-.hugo_build.lock
-
-# R / blogdown
-.Rproj.user
-.Rhistory
-.RData
-.Ruserdata
-
-# Claude Code
-.claude/
-
-# Node
-node_modules/
-npm-debug.log
-
-# OS
+# macOS
 .DS_Store
-Thumbs.db
-nul
 
-# R profile (contains local Hugo version path)
-.Rprofile
+# Editors / tooling
+.claude/
+.Rproj.user
