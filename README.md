@@ -1,9 +1,9 @@
 # Mind Move Thrive
 
-The website at **https://mondpanther.github.io/mmt/**
+Live at **https://mindmovethrive.live**
 
 These files *are* the website. There is no build step, no generator and no
-dependencies — GitHub Pages serves this folder exactly as it stands.
+dependencies — the host serves this folder exactly as it stands.
 
 **To preview locally:** double-click `index.html`. It looks identical to the
 live site, because it is the same files.
@@ -19,12 +19,22 @@ live site, because it is the same files.
 | `posts/` | One HTML file per post |
 | `media/` | Photos and logo |
 | `css/style.css` | All styling |
+| `netlify.toml` | Tells Netlify to publish the root as-is, with no build |
 | `.nojekyll` | Stops GitHub Pages running Jekyll over the folder |
 | `_old-hugo/` | The previous Hugo + Wowchemy site, kept for reference only. Not used. |
 
 See [HOW-TO-EDIT.md](HOW-TO-EDIT.md) for the editing guide.
 
-## GitHub Pages setting
+## Hosting
 
-Settings → Pages → **Deploy from a branch** → `master` → `/ (root)`.
-No GitHub Actions workflow is involved.
+**Netlify is the primary host.** It deploys automatically from `master` and
+serves the `mindmovethrive.live` domain, including its HTTPS certificate.
+
+**GitHub Pages is a secondary copy**, served from `master` / `(root)` at
+https://mondpanther.github.io/mmt/. It needs no configuration and is kept as a
+standby. To switch it off: Settings -> Pages -> Source -> None.
+
+Because every link in the site is relative, the same files work unchanged on
+both hosts and when opened directly from disk.
+
+No GitHub Actions workflow is involved in either deploy.

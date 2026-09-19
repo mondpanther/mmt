@@ -1,0 +1,10 @@
+# How this site is deployed.
+#
+# There is no build step — the files in this repository ARE the website.
+# These two lines tell Netlify to publish the repository root exactly as it
+# stands. Settings in netlify.toml override the Netlify dashboard, so the
+# deploy can't silently change because someone edited a setting in the UI.
+
+[build]
+  command = ""
+  publish = "."
