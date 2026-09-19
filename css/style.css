@@ -1,0 +1,498 @@
+/* ==========================================================================
+   Mind Move Thrive — Oak & Stone
+   Plain CSS. No build step. Edit this file directly.
+   ========================================================================== */
+
+:root {
+  --primary: #a3855c;
+  --primary-dark: #8a6f4a;
+  --text: #594f48;
+  --text-muted: #7d7169;
+  --cream: #f8f1e8;
+  --cream-alt: #f2ebe0;
+  --rule: rgba(89, 79, 72, 0.12);
+  --serif: 'Cormorant Garamond', Garamond, Georgia, 'Times New Roman', serif;
+  --sans: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --measure: 46rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 1.3125rem;
+  line-height: 1.75;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--text);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--serif);
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.2;
+  margin: 0 0 0.6em;
+}
+
+h1 { font-size: clamp(2.75rem, 7vw, 4.5rem); letter-spacing: 0.01em; }
+h2 { font-size: clamp(2rem, 4.5vw, 2.9rem); }
+h3 { font-size: 1.5rem; }
+
+p { margin: 0 0 1.35em; }
+p:last-child { margin-bottom: 0; }
+
+/* --------------------------------------------------------------------------
+   Navigation
+   -------------------------------------------------------------------------- */
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--cream);
+  border-bottom: 1px solid var(--rule);
+}
+
+.nav__inner {
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.nav__brand {
+  display: inline-block;
+  line-height: 0;
+}
+
+.nav__brand img {
+  max-height: 96px;
+  width: auto;
+}
+
+.nav__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem 1.9rem;
+}
+
+.nav__links a {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  padding: 0.35rem 0;
+  border-bottom: 1px solid transparent;
+}
+
+.nav__links a:hover,
+.nav__links a.is-active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+/* --------------------------------------------------------------------------
+   Sections
+   -------------------------------------------------------------------------- */
+
+.section {
+  padding: 6rem 1.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.section:nth-of-type(odd) { background: var(--cream); }
+.section:nth-of-type(even) { background: var(--cream-alt); }
+
+.section__inner {
+  max-width: var(--measure);
+  margin: 0 auto;
+}
+
+.section__inner--wide { max-width: 68rem; }
+
+.section__title {
+  text-align: center;
+  margin-bottom: 0.4em;
+}
+
+.section__subtitle {
+  text-align: center;
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--text-muted);
+  max-width: 38rem;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+.section__title + .section__body { margin-top: 2.5rem; }
+
+/* --------------------------------------------------------------------------
+   Hero
+   -------------------------------------------------------------------------- */
+
+.hero {
+  position: relative;
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7rem 1.5rem;
+  text-align: center;
+  color: #fff;
+  background-color: var(--text);
+  background-image: url('../media/cover-image.jpg');
+  background-size: cover;
+  background-position: center;
+  border-bottom: none;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(40, 34, 30, 0.45);
+}
+
+.hero__inner {
+  position: relative;
+  max-width: 44rem;
+}
+
+.hero h1 {
+  color: #fff;
+  margin-bottom: 0.4em;
+}
+
+.hero__tagline {
+  font-size: clamp(1.3rem, 2.6vw, 1.75rem);
+  font-style: italic;
+  color: #f4ece2;
+  margin-bottom: 1.5em;
+}
+
+.hero__lede {
+  font-size: 1.2rem;
+  color: #ece3d8;
+  line-height: 1.75;
+}
+
+/* --------------------------------------------------------------------------
+   Collapsible service panels
+   -------------------------------------------------------------------------- */
+
+details {
+  margin-bottom: 1rem;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 0.85rem 1.25rem;
+  background: rgba(255, 255, 255, 0.4);
+  transition: background-color 0.2s ease;
+}
+
+details[open] { background: rgba(255, 255, 255, 0.75); }
+
+details summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 0.25rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+details summary::-webkit-details-marker { display: none; }
+
+details summary::before {
+  content: '';
+  flex: none;
+  width: 0;
+  height: 0;
+  border-left: 7px solid var(--primary);
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  transition: transform 0.2s ease;
+}
+
+details[open] summary::before { transform: rotate(90deg); }
+
+details summary h3 { margin: 0; font-size: 1.4rem; }
+
+details .details__body { padding: 0.5rem 0 0.25rem 1.3rem; }
+
+/* --------------------------------------------------------------------------
+   Post cards
+   -------------------------------------------------------------------------- */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: 1.75rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(89, 79, 72, 0.09);
+}
+
+.card__date {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.7rem;
+}
+
+.card__title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.25;
+}
+
+.card__title a { color: var(--text); }
+.card__title a:hover { color: var(--primary); }
+
+.card__summary {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+.card__more {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.center { text-align: center; }
+.mt-3 { margin-top: 3rem; }
+
+/* --------------------------------------------------------------------------
+   Buttons
+   -------------------------------------------------------------------------- */
+
+.btn {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  padding: 0.85rem 2rem;
+  border-radius: 3px;
+  background: var(--primary);
+  color: #fff;
+  border: 1px solid var(--primary);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn:hover {
+  background: var(--text);
+  border-color: var(--text);
+  color: #fff;
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--primary);
+}
+
+.btn--ghost:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+/* --------------------------------------------------------------------------
+   Contact
+   -------------------------------------------------------------------------- */
+
+.contact {
+  position: relative;
+  padding: 7rem 1.5rem;
+  color: #fff;
+  background-color: var(--text);
+  background-image: url('../media/IMG_20220528_212503.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  border-bottom: none;
+}
+
+.contact::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(40, 34, 30, 0.5);
+}
+
+.contact .section__inner { position: relative; }
+.contact h2 { color: #fff; }
+.contact p { color: #ece3d8; }
+
+.contact__email {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.contact__email:hover {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+.social {
+  list-style: none;
+  margin: 2.25rem 0 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.social a {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  padding-bottom: 2px;
+}
+
+.social a:hover { border-bottom-color: #fff; }
+
+/* --------------------------------------------------------------------------
+   Article pages
+   -------------------------------------------------------------------------- */
+
+.article {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 5rem 1.5rem 6rem;
+}
+
+.article__back {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 2.5rem;
+}
+
+.article__date {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.9rem;
+}
+
+.article h1 {
+  font-size: clamp(2.1rem, 4.5vw, 3rem);
+  margin-bottom: 0.5em;
+}
+
+.article__lede {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--text-muted);
+  padding-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--rule);
+  line-height: 1.6;
+}
+
+.article__body p { font-size: 1.32rem; }
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+
+.footer {
+  background: var(--cream-alt);
+  padding: 3rem 1.5rem;
+  text-align: center;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+.footer a { color: var(--text-muted); text-decoration: underline; }
+.footer a:hover { color: var(--primary); }
+
+/* --------------------------------------------------------------------------
+   Small screens
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  body { font-size: 1.2rem; }
+  .section { padding: 4rem 1.25rem; }
+  .nav__brand img { max-height: 64px; }
+  .nav__links { gap: 0.25rem 1.1rem; }
+  .nav__links a { font-size: 1.05rem; }
+  .hero { min-height: 78vh; padding: 5rem 1.25rem; }
+  .article { padding: 3rem 1.25rem 4rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
